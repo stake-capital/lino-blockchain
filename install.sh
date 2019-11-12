@@ -29,3 +29,21 @@
 
 # Increase number of connections
 ulimit -n 4096
+
+# Create systemd
+
+# Create systemd unit file
+echo "[Unit]
+Description=Lino Validator
+After=network-online.target
+[Service]
+User=ubuntu
+ExecStart=/home/ubuntu/go/bin/lino start 
+Restart=always
+RestartSec=3
+LimitNOFILE=4096
+[Install]
+WantedBy=multi-user.target" > lino.service
+
+sudo mv lino.service /etc/systemd/system/
+sudo systemctl enable lino.service
