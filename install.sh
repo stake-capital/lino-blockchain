@@ -22,3 +22,7 @@
 `cd lino`
 `git checkout v0.6.6`
 `make get_tools && make install`
+
+# Run lino 
+`/home/ubuntu/go/bin/lino init`
+`/home/ubuntu/go/bin/lino start`
