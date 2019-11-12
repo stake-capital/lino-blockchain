@@ -26,3 +26,6 @@
 # Run lino 
 `/home/ubuntu/go/bin/lino init`
 `/home/ubuntu/go/bin/lino start`
+
+# Increase number of connections
+ulimit -n 4096
